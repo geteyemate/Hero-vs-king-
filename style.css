@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.reel-container {
+    width: 360px;
+    height: 640px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    border: 3px solid #e94560;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(233, 69, 96, 0.4);
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fighter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fighter-info.right {
+    align-items: flex-end;
+}
+
+.hp-bar {
+    width: 120px;
+    height: 12px;
+    background: #333;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.hp-fill {
+    width: 100%;
+    height: 100%;
+    background: #4ecc6d;
+    transition: width 0.3s ease;
+}
+
+#demon-hp {
+    background: #e94560;
+}
+
+.vs {
+    font-size: 16px;
+    color: #f39c12;
+    font-style: italic;
+}
+
+.arena {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.fighter {
+    font-size: 64px;
+    transition: transform 0.2s ease;
+}
+
+.hero.attack {
+    transform: translateX(80px) scale(1.2);
+}
+
+.demon.hit {
+    transform: translateX(20px) scale(0.9);
+    filter: brightness(2) sepia(1) hue-rotate(-50deg);
+}
+
+.watermark {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
