@@ -1,32 +1,25 @@
 const hero = document.getElementById('hero');
 const demon = document.getElementById('demon');
-const heroHp = document.getElementById('hero-hp');
-const demonHp = document.getElementById('demon-hp');
+const spark = document.getElementById('spark');
 
-let heroHealth = 100;
-let demonHealth = 100;
-
-function strikeEffect() {
-    hero.classList.add('attack');
+function triggerFight() {
+    // Hero attacks
     setTimeout(() => {
-        demon.classList.add('hit');
-        demonHealth -= 20;
-        demonHp.style.width = Math.max(demonHealth, 0) + '%';
+        hero.classList.add('attack');
         
         setTimeout(() => {
-            hero.classList.remove('attack');
-            demon.classList.remove('hit');
-        }, 200);
-    }, 200);
+            spark.classList.add('active');
+            demon.classList.add('hit');
+        }, 100);
 
-    if (demonHealth <= 0) {
+        // Reset after hit
         setTimeout(() => {
-            heroHealth = 100;
-            demonHealth = 100;
-            heroHp.style.width = '100%';
-            demonHp.style.width = '100%';
-        }, 1500);
-    }
+            hero.classList.remove('attack');
+            spark.classList.remove('active');
+            demon.classList.remove('hit');
+        }, 300);
+    }, 500);
 }
 
-setInterval(strikeEffect, 2000);
+// Continuous loop for reel action
+setInterval(triggerFight, 1500);
