@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero vs Demon King</title>
+    <title>Stickman Epic Fight</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="reel-container">
-        <div class="hud">
-            <div class="fighter-info">
-                <span>HERO</span>
-                <div class="hp-bar"><div id="hero-hp" class="hp-fill"></div></div>
-            </div>
-            <div class="vs">VS</div>
-            <div class="fighter-info right">
-                <span>DEMON KING</span>
-                <div class="hp-bar"><div id="demon-hp" class="hp-fill"></div></div>
-            </div>
-        </div>
-
+        <!-- Pure Cinematic Stickman Arena -->
         <div class="arena">
-            <div id="hero" class="fighter hero">⚔️</div>
-            <div id="demon" class="fighter demon">👹</div>
+            <!-- Hero Stickman -->
+            <div id="hero" class="stickman hero">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="arms"></div>
+                <div class="legs"></div>
+                <div class="sword"></div>
+            </div>
+
+            <!-- Clash Spark Effect -->
+            <div id="spark" class="spark">⚡</div>
+
+            <!-- Demon King Stickman -->
+            <div id="demon" class="stickman demon">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="arms"></div>
+                <div class="legs"></div>
+                <div class="horns"></div>
+            </div>
         </div>
 
         <div class="watermark">@vinjex.dev</div>
