@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stickman Epic Fight</title>
+    <title>Epic Anime Fight</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="reel-container">
-        <!-- Pure Cinematic Stickman Arena -->
+        <!-- Cinematic Battle Scene -->
+        <div class="sky">
+            <div class="stars"></div>
+        </div>
+
         <div class="arena">
-            <!-- Hero Stickman -->
-            <div id="hero" class="stickman hero">
+            <!-- Hero Character with Cape & Sword -->
+            <div id="hero" class="fighter hero">
+                <div class="cape"></div>
                 <div class="head"></div>
                 <div class="body"></div>
-                <div class="arms"></div>
-                <div class="legs"></div>
-                <div class="sword"></div>
+                <div class="arm left"></div>
+                <div class="arm right"><div class="sword"></div></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
             </div>
 
-            <!-- Clash Spark Effect -->
-            <div id="spark" class="spark">⚡</div>
+            <!-- Energy / Magic Projectiles -->
+            <div id="hero-blast" class="energy-blast hero-blast"></div>
+            <div id="demon-blast" class="energy-blast demon-blast"></div>
+            <div id="impact-effect" class="impact">💥</div>
 
-            <!-- Demon King Stickman -->
-            <div id="demon" class="stickman demon">
+            <!-- Demon King Character with Horns & Aura -->
+            <div id="demon" class="fighter demon">
+                <div class="horns"></div>
                 <div class="head"></div>
                 <div class="body"></div>
-                <div class="arms"></div>
-                <div class="legs"></div>
-                <div class="horns"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
             </div>
         </div>
+
+        <!-- Solid Ground Floor -->
+        <div class="ground"></div>
 
         <div class="watermark">@vinjex.dev</div>
     </div>
